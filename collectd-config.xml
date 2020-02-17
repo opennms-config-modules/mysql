@@ -1,0 +1,10 @@
+<service name="MySQL" interval="300000" user-defined="false" status="on">
+    <parameter key="collection" value="MySQL"/>
+    <parameter key="thresholding-enabled" value="true"/>
+    <parameter key="driver" value="com.mysql.jdbc.Driver"/>
+    <parameter key="user" value="mysql"/>
+    <parameter key="password" value="mysql"/>
+    <parameter key="url" value="jdbc:mysql://OPENNMS_JDBC_HOSTNAME:3306/database_name"/>
+</service>
+
+<collector service="MySQL" class-name="org.opennms.netmgt.collectd.JdbcCollector"/>
